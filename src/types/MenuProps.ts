@@ -4,6 +4,7 @@
  * MIT License - See LICENSE file
  */
 
-export interface VisibleState {
-    isVisible: boolean;
+export interface MenuProps {
+    activeItem: string;
+    onChangeMenuItem: (newItem: string) => void;
 }

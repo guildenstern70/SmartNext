@@ -7,18 +7,12 @@
 import * as React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './Layout.css';
-import {
-    Header,
-    Container,
-    Image, Icon, Menu, Segment, Input
-} from "semantic-ui-react";
-import MobileMenu from ".//MobileMenu";
-import {VisibleState} from "../types/VisibleState";
-import {MobileMenuProps} from "../types/MobileMenuProps";
+import { Header, Container, Icon, Menu, Segment, Input } from 'semantic-ui-react';
+import MobileMenu from './/MobileMenu';
+import { VisibleState } from '../types/VisibleState';
+import { MobileMenuProps } from '../types/MobileMenuProps';
 
-class Layout extends React.Component<MobileMenuProps, VisibleState>
-{
-
+class Layout extends React.Component<MobileMenuProps, VisibleState> {
     constructor(props: MobileMenuProps) {
         super(props);
         this.state = { isVisible: false };
@@ -29,57 +23,43 @@ class Layout extends React.Component<MobileMenuProps, VisibleState>
     changeMenuVisibility(): void {
         const currentState = this.state.isVisible;
         this.setState({
-            isVisible: !currentState
-        })
+            isVisible: !currentState,
+        });
     }
 
     hideMenu(): void {
         this.setState({
-            isVisible: false
-        })
+            isVisible: false,
+        });
     }
 
-    render(): React.ReactNode { return (
-
-        <MobileMenu isVisible={this.state.isVisible}>
-
-            <Container className='fullHeight'>
-                <Header>
-                    <Menu>
-                        <Menu.Item
-                            name='mobileMenu'
-                            onClick={this.changeMenuVisibility}
-                        >
-                            <Icon name='bars' />
-                        </Menu.Item>
-                        <Menu.Item>
-                            Home
-                        </Menu.Item>
-                        <Menu.Item>
-                            Games
-                        </Menu.Item>
-                        <Menu.Item>
-                            Channels
-                        </Menu.Item>
-                        <Menu.Item>
-                            Info
-                        </Menu.Item>
-                        <Menu.Menu position='right'>
-                            <Menu.Item>
-                                <Input icon='search' placeholder='Search...' />
+    render(): React.ReactNode {
+        return (
+            <MobileMenu isVisible={this.state.isVisible}>
+                <Container className="fullHeight">
+                    <Header>
+                        <Menu>
+                            <Menu.Item name="mobileMenu" onClick={this.changeMenuVisibility}>
+                                <Icon name="bars" />
                             </Menu.Item>
-                        </Menu.Menu>
-                    </Menu>
-                </Header>
-                <Segment basic onClick={this.hideMenu}>
-                    {this.props.children}
-                </Segment>
-            </Container>
-
-        </MobileMenu>
-
-    )};
-
+                            <Menu.Item name="Home">Home</Menu.Item>
+                            <Menu.Item name="Games">Games</Menu.Item>
+                            <Menu.Item>Channels</Menu.Item>
+                            <Menu.Item>Info</Menu.Item>
+                            <Menu.Menu position="right">
+                                <Menu.Item>
+                                    <Input icon="search" placeholder="Search..." />
+                                </Menu.Item>
+                            </Menu.Menu>
+                        </Menu>
+                    </Header>
+                    <Segment basic onClick={this.hideMenu}>
+                        {this.props.children}
+                    </Segment>
+                </Container>
+            </MobileMenu>
+        );
+    }
 }
 
 export default Layout;

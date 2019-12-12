@@ -4,6 +4,6 @@
  * MIT License - See LICENSE file
  */
 
-export interface VisibleState {
-    isVisible: boolean;
+export interface MobileMenuState {
+    activeItem: string;
 }
