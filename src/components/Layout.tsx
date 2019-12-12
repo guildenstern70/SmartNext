@@ -12,7 +12,7 @@ import {
     Container,
     Image, Icon, Menu, Segment, Input
 } from "semantic-ui-react";
-import MobileMenu from "../components/MobileMenu";
+import MobileMenu from ".//MobileMenu";
 import {VisibleState} from "../types/VisibleState";
 import {MobileMenuProps} from "../types/MobileMenuProps";
 
@@ -54,6 +54,15 @@ class Layout extends React.Component<MobileMenuProps, VisibleState>
                         </Menu.Item>
                         <Menu.Item>
                             Home
+                        </Menu.Item>
+                        <Menu.Item>
+                            Games
+                        </Menu.Item>
+                        <Menu.Item>
+                            Channels
+                        </Menu.Item>
+                        <Menu.Item>
+                            Info
                         </Menu.Item>
                         <Menu.Menu position='right'>
                             <Menu.Item>

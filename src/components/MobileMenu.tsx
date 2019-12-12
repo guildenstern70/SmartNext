@@ -33,14 +33,8 @@ class MobileMenu extends React.Component<MobileMenuProps> {
                 visible={this.props.isVisible}
                 width='thin'
             >
-                <Link href="/Index" passHref>
-                    <Menu.Item as='a'>
-                        <Icon name='play' />
-                            Index
-                    </Menu.Item>
-                </Link>
 
-                <Link href="/Home" passHref>
+                <Link href="/" passHref>
                     <Menu.Item as='a'>
                         <Icon name='home' />
                         Home
@@ -58,6 +52,13 @@ class MobileMenu extends React.Component<MobileMenuProps> {
                     <Menu.Item as='a'>
                         <Icon name='camera' />
                             Channels
+                    </Menu.Item>
+                </Link>
+
+                <Link href="/Info" passHref>
+                    <Menu.Item as='a'>
+                        <Icon name='play' />
+                        Info
                     </Menu.Item>
                 </Link>
 

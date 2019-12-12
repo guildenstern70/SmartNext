@@ -9,7 +9,7 @@ import {Header, Image} from "semantic-ui-react";
 
 const Games = () => (
     <Layout isVisible={false}>
-        <Header>Game</Header>
+        <Header>Games</Header>
         <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
     </Layout>
 );
