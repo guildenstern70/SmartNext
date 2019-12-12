@@ -8,8 +8,12 @@ import * as React from 'react';
 import { Icon, Menu } from 'semantic-ui-react';
 import Link from 'next/link';
 import { MenuProps } from '../types/MenuProps';
+import PropTypes from 'prop-types';
+import { Validator } from 'react';
 
 class NextMenu extends React.Component<MenuProps> {
+    static propTypes: { activeItem: Validator<NonNullable<string>> };
+
     constructor(props) {
         super(props);
     }
@@ -73,5 +77,9 @@ class NextMenu extends React.Component<MenuProps> {
         );
     }
 }
+
+NextMenu.propTypes = {
+    activeItem: PropTypes.string.isRequired,
+};
 
 export default NextMenu;
