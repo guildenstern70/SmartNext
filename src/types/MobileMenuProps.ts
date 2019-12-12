@@ -4,8 +4,10 @@
  * MIT License - See LICENSE file
  */
 
-interface MobileMenuProps {
+import React from "react";
+
+export interface MobileMenuProps {
     children?: React.ReactNode,
-    visible: boolean
+    isVisible: boolean
 }
 

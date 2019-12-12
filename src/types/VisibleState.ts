@@ -4,7 +4,7 @@
  * MIT License - See LICENSE file
  */
 
-interface IndexState {
-    mobileMenuVisible: boolean
+export interface VisibleState {
+    isVisible: boolean
 }
 
