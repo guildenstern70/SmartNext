@@ -15,17 +15,7 @@ import {MenuItem} from "../types/MenuItem";
 class Info extends React.Component {
 
     static getInitialProps({store, isServer, pathname, query}) {
-
-        console.log('Current store for INFO:');
-        console.log(JSON.stringify(store));
-
         store.dispatch({type: 'CHANGE_MENU_ITEM', payload: MenuItem.INFO});
-        // component will be able to read from store's state when rendered
-
-        console.log('After-dispatching store:');
-        console.log(JSON.stringify(store));
-
-        return {custom: 'custom'}; // you can pass some custom props to component from here
     }
 
     render(): React.ReactNode {

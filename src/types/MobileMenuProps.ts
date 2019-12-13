@@ -9,4 +9,5 @@ import React from 'react';
 export interface MobileMenuProps {
     children?: React.ReactNode;
     isVisible: boolean;
+    title?: String;
 }
