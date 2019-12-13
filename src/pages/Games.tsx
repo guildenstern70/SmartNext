@@ -5,13 +5,35 @@
  */
 import React from 'react';
 import Layout from '../components/Layout';
+import { connect } from 'react-redux'
 import { Header, Image } from 'semantic-ui-react';
+import {MenuItem} from "../types/MenuItem";
 
-const Games = (): React.ReactNode => (
-    <Layout isVisible={false}>
-        <Header>Games</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-    </Layout>
-);
+class Games extends React.Component {
 
-export default Games;
+    static getInitialProps({store, isServer, pathname, query}) {
+
+        console.log('Current store for GAMES:');
+        console.log(JSON.stringify(store));
+
+        store.dispatch({type: 'CHANGE_MENU_ITEM', payload: MenuItem.GAMES}); // component will be able to read from store's state when rendered
+
+        console.log('After-dispatching store:');
+        console.log(JSON.stringify(store));
+
+        return {custom: 'custom'}; // you can pass some custom props to component from here
+    }
+
+    render(): React.ReactNode {
+        return (
+            <Layout isVisible={false}>
+                <Header>Games</Header>
+                <Image src="/img/paragraph.png" />
+            </Layout>
+        );
+    }
+}
+
+export default connect()(Games);
+
+

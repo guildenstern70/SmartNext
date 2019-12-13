@@ -5,22 +5,24 @@
  */
 
 import * as React from 'react';
-import { Icon, Menu } from 'semantic-ui-react';
+import { connect } from 'react-redux'
 import Link from 'next/link';
-import { MenuProps } from '../types/MenuProps';
 import PropTypes from 'prop-types';
+import { Icon, Menu } from 'semantic-ui-react';
+import { MenuProps } from '../types/MenuProps';
 import { Validator } from 'react';
+import {SystemState} from "../redux/actions";
+import {MenuItem} from "../types/MenuItem";
 
 class NextMenu extends React.Component<MenuProps> {
+
     static propTypes: { activeItem: Validator<NonNullable<string>> };
 
     constructor(props) {
         super(props);
+        console.log('Next Menu Props:');
+        console.log(JSON.stringify(props));
     }
-
-    clickEventHandler = (e: React.SyntheticEvent, newItem: string): void => {
-        this.props.onChangeMenuItem(newItem);
-    };
 
     render(): React.ReactNode {
         console.log('Active item > ' + this.props.activeItem);
@@ -31,7 +33,6 @@ class NextMenu extends React.Component<MenuProps> {
                         as="a"
                         name="home"
                         active={this.props.activeItem === 'home'}
-                        onClick={(e): void => this.clickEventHandler(e, 'home')}
                     >
                         <Icon name="home" />
                         Home
@@ -43,7 +44,6 @@ class NextMenu extends React.Component<MenuProps> {
                         as="a"
                         name="games"
                         active={this.props.activeItem === 'games'}
-                        onClick={(e): void => this.clickEventHandler(e, 'games')}
                     >
                         <Icon name="gamepad" />
                         Games
@@ -55,7 +55,6 @@ class NextMenu extends React.Component<MenuProps> {
                         as="a"
                         name="channels"
                         active={this.props.activeItem === 'channels'}
-                        onClick={(e): void => this.clickEventHandler(e, 'channels')}
                     >
                         <Icon name="camera" />
                         Channels
@@ -67,7 +66,6 @@ class NextMenu extends React.Component<MenuProps> {
                         as="a"
                         name="info"
                         active={this.props.activeItem === 'info'}
-                        onClick={(e): void => this.clickEventHandler(e, 'info')}
                     >
                         <Icon name="play" />
                         Info
@@ -82,4 +80,30 @@ NextMenu.propTypes = {
     activeItem: PropTypes.string.isRequired,
 };
 
-export default NextMenu;
+// It is used for selecting the part of the data from the store that the connected component needs.
+const mapStateToProps = (state: SystemState /*, ownProps*/): MenuProps => {
+
+    let activeMenu = "?";
+
+    switch (state.activeMenuItem) {
+        case MenuItem.HOME:
+            activeMenu = 'home';
+            break;
+        case MenuItem.CHANNEL:
+            activeMenu = 'channels';
+            break;
+        case MenuItem.GAMES:
+            activeMenu = 'games';
+            break;
+        case MenuItem.INFO:
+            activeMenu = 'info';
+            break;
+    }
+    return { activeItem: activeMenu }
+};
+
+export default connect(
+    mapStateToProps
+)(NextMenu);
+
+

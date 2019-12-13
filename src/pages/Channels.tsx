@@ -5,14 +5,37 @@
  */
 
 import React from 'react';
+import { connect } from 'react-redux'
 import Layout from '../components/Layout';
 import { Header, Image } from 'semantic-ui-react';
+import {MenuItem} from "../types/MenuItem";
 
-const Channels = (): React.ReactNode => (
-    <Layout isVisible={false}>
-        <Header>Channels</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-    </Layout>
-);
+class Channels extends React.Component {
 
-export default Channels;
+    static getInitialProps({store, isServer, pathname, query}) {
+
+        console.log('Current store for HOME:');
+        console.log(JSON.stringify(store));
+
+        store.dispatch({type: 'CHANGE_MENU_ITEM', payload: MenuItem.CHANNEL});
+        // component will be able to read from store's state when rendered
+
+        console.log('After-dispatching store:');
+        console.log(JSON.stringify(store));
+
+        return {custom: 'custom'}; // you can pass some custom props to component from here
+    }
+
+    render(): React.ReactNode {
+        return (
+            <Layout isVisible={false}>
+                <Header>Channels</Header>
+                <Image src="/img/paragraph.png"/>
+            </Layout>
+        );
+    }
+}
+
+export default connect()(Channels);
+
+

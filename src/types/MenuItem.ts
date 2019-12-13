@@ -4,6 +4,9 @@
  * MIT License - See LICENSE file
  */
 
-export interface MenuProps {
-    activeItem: string
+export enum MenuItem {
+    HOME,
+    GAMES,
+    CHANNEL,
+    INFO
 }

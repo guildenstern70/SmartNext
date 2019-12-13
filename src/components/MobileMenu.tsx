@@ -30,7 +30,6 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
         return (
             <Sidebar.Pushable style={mobileMenuStyle} as={Segment}>
                 <Sidebar
-                    style={mobileMenuStyle}
                     as={Menu}
                     animation="overlay"
                     icon="labeled"
