@@ -5,14 +5,13 @@
  */
 import React from 'react';
 import Layout from '../components/Layout';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { Header, Image } from 'semantic-ui-react';
-import {MenuItem} from "../types/MenuItem";
+import { MenuItem } from '../types/MenuItem';
 
 class Games extends React.Component {
-
-    static getInitialProps({store}) {
-        store.dispatch({type: 'CHANGE_MENU_ITEM', payload: MenuItem.GAMES}); // component will be able to read from store's state when rendered
+    static getInitialProps({ store }): void {
+        store.dispatch({ type: 'CHANGE_MENU_ITEM', payload: MenuItem.GAMES }); // component will be able to read from store's state when rendered
     }
 
     render(): React.ReactNode {
@@ -26,5 +25,3 @@ class Games extends React.Component {
 }
 
 export default connect()(Games);
-
-

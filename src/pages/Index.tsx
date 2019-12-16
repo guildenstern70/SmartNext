@@ -5,15 +5,14 @@
  */
 
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import { Header, Image } from 'semantic-ui-react';
-import {MenuItem} from "../types/MenuItem";
+import { MenuItem } from '../types/MenuItem';
 
 class Index extends React.Component {
-
-    static getInitialProps({store}) {
-        store.dispatch({type: 'CHANGE_MENU_ITEM', payload: MenuItem.HOME});
+    static getInitialProps({ store }): void {
+        store.dispatch({ type: 'CHANGE_MENU_ITEM', payload: MenuItem.HOME });
     }
 
     render(): React.ReactNode {
@@ -27,4 +26,3 @@ class Index extends React.Component {
 }
 
 export default connect()(Index);
-

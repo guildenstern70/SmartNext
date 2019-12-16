@@ -5,5 +5,5 @@
  */
 
 export interface MenuProps {
-    activeItem: string
+    activeItem: string;
 }

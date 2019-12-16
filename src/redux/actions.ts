@@ -4,16 +4,15 @@
  * MIT License - See LICENSE file
  */
 
-import {MenuItem} from "../types/MenuItem";
+import { MenuItem } from '../types/MenuItem';
 
 export interface SystemState {
-    activeMenuItem: MenuItem
+    activeMenuItem: MenuItem;
 }
 
-export const CHANGE_MENU_ITEM = "CHANGE_MENU_ITEM";
+export const CHANGE_MENU_ITEM = 'CHANGE_MENU_ITEM';
 
 export interface ChangeMenuItemAction {
-    type: typeof CHANGE_MENU_ITEM,
-    payload: MenuItem
+    type: typeof CHANGE_MENU_ITEM;
+    payload: MenuItem;
 }
-

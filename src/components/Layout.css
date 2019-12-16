@@ -15,3 +15,7 @@ body {
 .fullHeight {
     height: 100vh;
 }
+
+.burger {
+    width: 50px;
+}

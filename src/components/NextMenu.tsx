@@ -5,17 +5,16 @@
  */
 
 import * as React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { Icon, Menu } from 'semantic-ui-react';
 import { MenuProps } from '../types/MenuProps';
 import { Validator } from 'react';
-import {SystemState} from "../redux/actions";
-import {MenuItem} from "../types/MenuItem";
+import { SystemState } from '../redux/actions';
+import { MenuItem } from '../types/MenuItem';
 
 class NextMenu extends React.Component<MenuProps> {
-
     static propTypes: { activeItem: Validator<NonNullable<string>> };
 
     constructor(props) {
@@ -29,44 +28,28 @@ class NextMenu extends React.Component<MenuProps> {
         return (
             <div>
                 <Link href="/" passHref>
-                    <Menu.Item
-                        as="a"
-                        name="home"
-                        active={this.props.activeItem === 'home'}
-                    >
+                    <Menu.Item as="a" name="home" active={this.props.activeItem === 'home'}>
                         <Icon name="home" />
                         Home
                     </Menu.Item>
                 </Link>
 
                 <Link href="/Games" passHref>
-                    <Menu.Item
-                        as="a"
-                        name="games"
-                        active={this.props.activeItem === 'games'}
-                    >
+                    <Menu.Item as="a" name="games" active={this.props.activeItem === 'games'}>
                         <Icon name="gamepad" />
                         Games
                     </Menu.Item>
                 </Link>
 
                 <Link href="/Channels" passHref>
-                    <Menu.Item
-                        as="a"
-                        name="channels"
-                        active={this.props.activeItem === 'channels'}
-                    >
+                    <Menu.Item as="a" name="channels" active={this.props.activeItem === 'channels'}>
                         <Icon name="camera" />
                         Channels
                     </Menu.Item>
                 </Link>
 
                 <Link href="/Info" passHref>
-                    <Menu.Item
-                        as="a"
-                        name="info"
-                        active={this.props.activeItem === 'info'}
-                    >
+                    <Menu.Item as="a" name="info" active={this.props.activeItem === 'info'}>
                         <Icon name="play" />
                         Info
                     </Menu.Item>
@@ -82,8 +65,7 @@ NextMenu.propTypes = {
 
 // It is used for selecting the part of the data from the store that the connected component needs.
 const mapStateToProps = (state: SystemState /*, ownProps*/): MenuProps => {
-
-    let activeMenu = "?";
+    let activeMenu = '?';
 
     switch (state.activeMenuItem) {
         case MenuItem.HOME:
@@ -99,11 +81,7 @@ const mapStateToProps = (state: SystemState /*, ownProps*/): MenuProps => {
             activeMenu = 'info';
             break;
     }
-    return { activeItem: activeMenu }
+    return { activeItem: activeMenu };
 };
 
-export default connect(
-    mapStateToProps
-)(NextMenu);
-
-
+export default connect(mapStateToProps)(NextMenu);
