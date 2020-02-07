@@ -4,6 +4,6 @@
  * MIT License - See LICENSE file
  */
 
-export interface MenuProps {
+export interface MenuState {
     activeItem: string;
 }
