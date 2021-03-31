@@ -6,8 +6,8 @@
 
 import React from 'react';
 
-export interface MobileMenuProps {
+export interface LayoutProps {
     children?: React.ReactNode;
-    isVisible: boolean;
-    title?: string;
+    activePage: string;
+    isMobile: boolean;
 }

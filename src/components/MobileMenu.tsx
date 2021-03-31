@@ -1,6 +1,6 @@
 /*
  * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-21.
  * MIT License - See LICENSE file
  */
 
@@ -11,8 +11,8 @@ import Link from 'next/link';
 import { MobileMenuProps } from '../types/MobileMenuProps';
 
 class MobileMenu extends React.Component<MobileMenuProps, MenuState> {
-    constructor(props: MobileMenuProps) {
-        super(props);
+    constructor(mobileMenuProps: MobileMenuProps) {
+        super(mobileMenuProps);
         console.log('New Mobile Menu');
         this.state = { activeItem: 'home' };
     }

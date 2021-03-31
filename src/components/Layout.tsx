@@ -1,19 +1,18 @@
 /*
  * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019.
+ * Copyright (c) Alessio Saltarin 2019-21.
  * MIT License - See LICENSE file
  */
 
 import * as React from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import { Header, Container, Icon, Menu, Segment } from 'semantic-ui-react';
+import { Header, Container, Segment } from 'semantic-ui-react';
+import { LayoutProps } from '../types/LayoutProps';
 import MobileMenu from './/MobileMenu';
 import { VisibleState } from '../types/VisibleState';
-import { MobileMenuProps } from '../types/MobileMenuProps';
 import DesktopMenu from './DesktopMenu';
 
-class Layout extends React.Component<MobileMenuProps, VisibleState> {
-    constructor(props: MobileMenuProps) {
+class Layout extends React.Component<LayoutProps, VisibleState> {
+    constructor(props: LayoutProps) {
         super(props);
         this.state = { isVisible: false };
         this.changeMenuVisibility = this.changeMenuVisibility.bind(this);
@@ -38,7 +37,7 @@ class Layout extends React.Component<MobileMenuProps, VisibleState> {
             <MobileMenu isVisible={this.state.isVisible}>
                 <Container className="fullHeight">
                     <Header>
-                        <DesktopMenu />
+                        <DesktopMenu activeItem={this.props.activePage} />
                     </Header>
                     <Segment basic onClick={this.hideMenu}>
                         {this.props.children}
