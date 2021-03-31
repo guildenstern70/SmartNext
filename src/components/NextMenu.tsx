@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { MenuProps } from '../types/MenuProps';
 
 class NextMenu extends React.Component<MenuProps> {
-    constructor(props) {
+    constructor(props: MenuProps) {
         super(props);
     }
 

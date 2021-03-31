@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { MobileMenuProps } from '../types/MobileMenuProps';
 
 class MobileMenu extends React.Component<MobileMenuProps, MenuState> {
-    constructor(props) {
+    constructor(props: MobileMenuProps) {
         super(props);
         console.log('New Mobile Menu');
         this.state = { activeItem: 'home' };

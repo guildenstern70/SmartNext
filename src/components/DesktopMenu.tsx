@@ -4,8 +4,8 @@ import { Icon, Menu } from 'semantic-ui-react';
 import Link from 'next/link';
 
 class DesktopMenu extends React.Component<{}, MenuState> {
-    constructor() {
-        super({});
+    constructor(props: {}) {
+        super(props);
         console.log('New Desktop Menu');
         this.state = { activeItem: 'home' };
     }
