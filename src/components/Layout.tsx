@@ -7,9 +7,10 @@
 import * as React from 'react';
 import { Header, Container, Segment, Grid, Menu, Icon, Image } from 'semantic-ui-react';
 import { LayoutProps } from '../types/LayoutProps';
-import MobileMenu from './/MobileMenu';
 import { LayoutState } from '../types/LayoutState';
 import DesktopMenu from './DesktopMenu';
+import MobileMenu from './MobileMenu';
+import styles from './Layout.module.css';
 
 class Layout extends React.Component<LayoutProps, LayoutState> {
     constructor(props: LayoutProps) {
@@ -45,7 +46,7 @@ class Layout extends React.Component<LayoutProps, LayoutState> {
                                             <Icon name="bars" />
                                         </Menu.Item>
                                     </Menu>
-                                    <div className="mobileMenuSpan"></div>
+                                    <div className={styles.mobileMenuSpan}></div>
                                 </Grid.Column>
                                 <Grid.Column only="computer">
                                     <DesktopMenu activeItem={this.props.activePage} />
