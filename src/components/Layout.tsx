@@ -5,13 +5,13 @@
  */
 
 import * as React from 'react';
-import { Header, Container, Segment } from 'semantic-ui-react';
+import { Header, Container, Segment, Grid, Menu, Icon, Image } from 'semantic-ui-react';
 import { LayoutProps } from '../types/LayoutProps';
 import MobileMenu from './/MobileMenu';
-import { VisibleState } from '../types/VisibleState';
+import { LayoutState } from '../types/LayoutState';
 import DesktopMenu from './DesktopMenu';
 
-class Layout extends React.Component<LayoutProps, VisibleState> {
+class Layout extends React.Component<LayoutProps, LayoutState> {
     constructor(props: LayoutProps) {
         super(props);
         this.state = { isVisible: false };
@@ -34,16 +34,31 @@ class Layout extends React.Component<LayoutProps, VisibleState> {
 
     render(): React.ReactNode {
         return (
-            <MobileMenu isVisible={this.state.isVisible}>
-                <Container className="fullHeight">
-                    <Header>
-                        <DesktopMenu activeItem={this.props.activePage} />
-                    </Header>
-                    <Segment basic onClick={this.hideMenu}>
-                        {this.props.children}
-                    </Segment>
-                </Container>
-            </MobileMenu>
+            <Container>
+                <MobileMenu activeItem={this.props.activePage} isVisible={this.state.isVisible}>
+                    <Container className="containerHeight">
+                        <Header>
+                            <Grid columns={1}>
+                                <Grid.Column only="mobile">
+                                    <Menu fixed="top" inverted>
+                                        <Menu.Item name="mobileMenu" onClick={this.changeMenuVisibility}>
+                                            <Icon name="bars" />
+                                        </Menu.Item>
+                                    </Menu>
+                                    <div className="mobileMenuSpan"></div>
+                                </Grid.Column>
+                                <Grid.Column only="computer">
+                                    <DesktopMenu activeItem={this.props.activePage} />
+                                </Grid.Column>
+                            </Grid>
+                        </Header>
+                        <Image className="imageTopSpan" src="/img/smartnext.png" size="big" />
+                        <Segment basic onClick={this.hideMenu}>
+                            {this.props.children}
+                        </Segment>
+                    </Container>
+                </MobileMenu>
+            </Container>
         );
     }
 }

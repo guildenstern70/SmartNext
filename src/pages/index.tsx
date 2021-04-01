@@ -10,7 +10,7 @@ import { Header, Image } from 'semantic-ui-react';
 const Index: React.FC = () => (
     <Layout isMobile={false} activePage="home">
         <Header>Home</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+        <Image src="img/paragraph.png" />
     </Layout>
 );
 

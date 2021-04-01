@@ -11,7 +11,7 @@ import Layout from '../components/Layout';
 const Info: React.FC = () => (
     <Layout isMobile={false} activePage="info">
         <Header>Info</Header>
-        <Image src="/img/paragraph.png" />
+        <Image src="img/paragraph.png" />
     </Layout>
 );
 

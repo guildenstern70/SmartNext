@@ -11,7 +11,7 @@ import { Header, Image } from 'semantic-ui-react';
 const Channels: React.FC = () => (
     <Layout isMobile={false} activePage="channels">
         <Header>Channels</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+        <Image src="img/paragraph.png" />
     </Layout>
 );
 

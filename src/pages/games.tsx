@@ -10,7 +10,7 @@ import { Header, Image } from 'semantic-ui-react';
 const Games: React.FC = () => (
     <Layout isMobile={false} activePage="games">
         <Header>Games</Header>
-        <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+        <Image src="img/paragraph.png" />
     </Layout>
 );
 

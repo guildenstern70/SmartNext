@@ -4,6 +4,6 @@
  * MIT License - See LICENSE file
  */
 
-export interface VisibleState {
+export interface LayoutState {
     isVisible: boolean;
 }
