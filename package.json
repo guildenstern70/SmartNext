@@ -25,7 +25,7 @@
     "@mantine/core": "^1.0.6",
     "@mantine/hooks": "^1.0.6",
     "@modulz/radix-icons": "^4.0.0",
-    "next": "^10.2.0",
+    "next": "^11.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-jss": "^10.6.0",
