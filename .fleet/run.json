@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+          "type": "command",
+          "name": "Run",
+          "environment": {
+            
+          }, // optional
+          "dependsOn": [], // optional
+          "program": "npm",
+          "args": ["run", "dev"], // optional
+          "pty": true, // optional
+        }
+      
+    ]
+}

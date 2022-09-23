@@ -1,8 +1,5 @@
-/*
- * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019-21.
- * MIT License - See LICENSE file
- */
-
 /// <reference types="next" />
-/// <reference types="next/types/global" />
+/// <reference types="next/image-types/global" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/basic-features/typescript for more information.

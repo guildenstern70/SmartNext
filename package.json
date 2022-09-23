@@ -1,63 +1,25 @@
 {
   "name": "smart-next",
   "version": "0.1.0",
-  "description": "A basic template project with Next.js, React and Semantic UI",
-  "main": "index.js",
-  "engines": {
-    "node": ">=12.13.0"
-  },
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src/**/*.{ts,tsx}",
-    "lint-fix": "eslint --fix src/**/*.{ts,tsx}",
-    "prettify": "echo 'yarn lint-fix automatically runs prettier!'"
+    "lint": "next lint"
   },
-  "keywords": [
-    "Next.js",
-    "React",
-    "Semantic UI"
-  ],
-  "author": "Alessio Saltarin <alessiosaltarin@gmail.com>",
-  "license": "MIT",
   "dependencies": {
-    "@mantine/core": "^1.0.6",
-    "@mantine/hooks": "^1.0.6",
-    "@modulz/radix-icons": "^4.0.0",
-    "next": "^10.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-jss": "^10.6.0",
-    "react-redux": "^7.2.3",
-    "redux": "^4.0.5",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
+    "@nextui-org/react": "^1.0.0-beta.10",
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "@types/react": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.23.1",
-    "file-loader": "^6.2.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.3",
-    "webpack": "^5.28.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/node": "18.7.14",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
+    "typescript": "4.8.2"
   }
 }

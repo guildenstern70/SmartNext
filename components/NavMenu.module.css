@@ -1,0 +1,13 @@
+/*
+ *
+ * SmartNext - Progressive Web
+ * Copyright (c) Alessio Saltarin 2019-22
+ * MIT License - See LICENSE file
+ *
+ */
+
+@media only screen and (min-width: 600px) {
+    .showOnMobileOnly {
+        display: none;
+    }
+}
