@@ -1,31 +1,44 @@
 /*
  *
- * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019-22
- * MIT License - See LICENSE file
+ * SmartNext
+ * A web template project for Next.js
+ * Copyright (c) 2020-22 Alessio Saltarin
+ * MIT License
  *
  */
 
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
+import { ChakraProvider } from "@chakra-ui/react";
 
-import { NextUIProvider } from '@nextui-org/react';
-import { SessionContext } from "../types/SessionContext";
-import { Session } from "../types/Session";
 
-// Do not modify this file
+// 1. Import the extendTheme function
+import { extendTheme } from '@chakra-ui/react'
 
-// @ts-ignore
-function MyApp({ Component, pageProps }) {
+// 2. Extend the theme to include custom colors, fonts, etc
+const colors = {
+  brand: {
+    900: '#1a365d',
+    800: '#153e75',
+    700: '#2a69ac',
+  },
+  fonts: {
+    heading: `'Rubik', sans-serif`,
+    body: `'Rubik', sans-serif`,
+  },
+};
 
+
+
+const theme = extendTheme({ colors })
+
+function MyApp({ Component, pageProps }: AppProps) {
   return (
+  <ChakraProvider theme={theme}>
+    <Component {...pageProps} />
+  </ChakraProvider>
+  );
 
-        <NextUIProvider>
-          <SessionContext.Provider value={new Session()}>
-            <Component {...pageProps} />
-          </SessionContext.Provider>
-        </NextUIProvider>
-
-    );
 }
 
-export default MyApp;
-
+export default MyApp

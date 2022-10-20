@@ -1,8 +1,9 @@
 /*
  *
- * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019-22
- * MIT License - See LICENSE file
+ * SmartNext
+ * A web template project for Next.js
+ * Copyright (c) 2020-22 Alessio Saltarin
+ * MIT License
  *
  */
 
@@ -10,7 +11,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+main {
+  padding: 50px;
 }
 
 a {
@@ -18,8 +23,16 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: circle;
+* {
+  box-sizing: border-box;
 }
 
-
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}

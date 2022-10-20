@@ -1,13 +1,14 @@
 /*
  *
- * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019-22
- * MIT License - See LICENSE file
+ * SmartNext
+ * A web template project for Next.js
+ * Copyright (c) 2020-22 Alessio Saltarin
+ * MIT License
  *
  */
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
   name: string

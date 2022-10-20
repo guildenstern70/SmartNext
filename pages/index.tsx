@@ -1,41 +1,40 @@
 /*
  *
- * SmartNext - Progressive Web
- * Copyright (c) Alessio Saltarin 2019-22
- * MIT License - See LICENSE file
+ * SmartNext
+ * A web template project for Next.js
+ * Copyright (c) 2020-22 Alessio Saltarin
+ * MIT License
  *
  */
 
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { Button, Center, Heading, HStack, VStack } from "@chakra-ui/react";
+import styles from '../styles/Index.module.css'
 
-import React from 'react';
-import Layout from '../components/Layout';
-import { NextPage } from 'next';
+const Home: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>SmartNext</title>
+        <meta name="description" content="Web template for Next.js" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-import { Card, Row, Text } from '@nextui-org/react';
+      <main>
+          <Center h='400px'>
+              <VStack spacing='50px'>
+                  <Heading as='h2' size='2xl'>I am <span className={styles.smartnext}>SmartNext</span></Heading>
+                  <HStack spacing='24px'>
+                      <Button width='150px' colorScheme='blue'>Ok</Button>
+                      <Button width='150px' colorScheme='gray'>Tell me more...</Button>
+                  </HStack>
+              </VStack>
+          </Center>
+      </main>
 
+    </div>
+  )
+}
 
-const Index: NextPage = (): JSX.Element =>
-
-    <Layout showImage={true} activePage="home">
-        <Row justify="center"  align="center" css={{ mt: "6em" }}>
-            <Card css={{ mw: "400px" }} variant="bordered">
-                <Card.Header>
-                    <Text h4 b>SmartNext Template</Text>
-                </Card.Header>
-                <Card.Divider />
-                <Card.Body>
-                    <Text>An easy template for &nbsp;
-                        <a href={'https://vercel.com/solutions/nextjs'}
-                           target={'_blank'} rel="noreferrer">Next.js</a> apps featuring:
-                    </Text>
-                    <ul>
-                        <li>* <a href={'https://nextjs.org/docs/basic-features/typescript'} target={'_blank'} rel="noreferrer">Next.js in Typescript</a></li>
-                        <li>* <a href={'https://nextui.org/'} target={'_blank'} rel="noreferrer">NextUI</a> </li>
-                    </ul>
-                </Card.Body>
-            </Card>
-        </Row>
-    </Layout>
-
-export default Index;
-
+export default Home

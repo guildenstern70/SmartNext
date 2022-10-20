@@ -1,3 +1,8 @@
+# IDEs
+.idea/
+.fleet/
+.code/
+
 # dependencies
 .next/
 node_modules/
