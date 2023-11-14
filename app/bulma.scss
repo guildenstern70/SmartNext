@@ -1,0 +1,34 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap');
+@import "node_modules/bulma/sass/utilities/initial-variables";
+
+// Brand colors
+$yellowbase: #ffd924;
+$azurebase: #12a4f5;
+$darkazurebase: #014661;
+$redbase: #f31155;
+$yellowdark: #ffbe41;
+$greenbase: #009b51;
+$dark-grey: #707072;
+$lite-grey: #e0e1e4;
+
+// Update Bulma's global style variables
+$family-sans-serif: 'Montserrat', sans-serif;
+$primary: $azurebase;
+$link: $yellowbase;
+$info: $yellowdark;
+$success: $greenbase;
+$warning: $redbase;
+$grey-dark: $dark-grey;
+$grey-light: $lite-grey;
+
+// Bulma controls colors
+$tabs-link-color: $darkazurebase;
+$tabs-link-active-color: $azurebase;
+$tabs-link-active-border-bottom-color: $azurebase;
+
+// Set other Bulma controls props
+$modal-content-width: 900px;
+
+
+@import "node_modules/bulma/bulma";
