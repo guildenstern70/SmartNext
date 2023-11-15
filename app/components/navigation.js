@@ -4,10 +4,20 @@
  * MIT License (see LICENSE)
  */
 
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navigation() {
+
+    function handleBurgerButton() {
+        const burger = document.querySelector('.navbar-burger');
+        const menu = document.querySelector('.navbar-menu');
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+    }
+
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -18,12 +28,15 @@ export default function Navigation() {
                         height={80}
                         alt="Next.js Logo" />
                 </Link>
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false"
-                   data-target="navbarBasicExample">
+                <button
+                    role="button"
+                    className="navbar-burger"
+                    aria-label="menu" aria-expanded="false"
+                    onClick={handleBurgerButton}>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                </a>
+                </button>
             </div>
 
             <div id="navbarBasicExample" className="navbar-menu">
@@ -46,9 +59,6 @@ export default function Navigation() {
                                 About
                             </a>
                             <a className="navbar-item">
-                                Jobs
-                            </a>
-                            <a className="navbar-item">
                                 Contact
                             </a>
                             <hr className="navbar-divider" />
@@ -60,15 +70,10 @@ export default function Navigation() {
                 </div>
 
                 <div className="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light">
-                                Log in
-                            </a>
-                        </div>
+                    <div className="navbar-item">
+                        <form>
+                            <input type={"text"} id="search" className="input" placeholder="Search..." />
+                        </form>
                     </div>
                 </div>
             </div>
