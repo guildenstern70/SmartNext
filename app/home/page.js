@@ -9,7 +9,10 @@ import Navpage from "@/app/components/navpage";
 export default function Page() {
     return (
         <Navpage>
-            <h1>Home</h1>
+            <div className="card">
+                <h1>Home</h1>
+                <p>Welcome to the main homepage of your Next.js application template. Explore the sections in the navigation dropdown or check the documentation to learn more.</p>
+            </div>
         </Navpage>
     )
 }

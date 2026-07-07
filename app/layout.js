@@ -5,7 +5,6 @@
  */
 
 
-import './bulma.scss';
 import './globals.css'
 
 export const metadata = {

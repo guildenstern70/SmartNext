@@ -9,7 +9,10 @@ import Navpage from "@/app/components/navpage";
 export default function Page() {
     return (
         <Navpage>
-            <h1>Contact</h1>
+            <div className="card">
+                <h1>Contact</h1>
+                <p>Have questions, feedback, or want to contribute? Reach out via our GitHub repository or contact our team.</p>
+            </div>
         </Navpage>
     )
 }

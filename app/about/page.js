@@ -9,7 +9,10 @@ import Navpage from "@/app/components/navpage";
 export default function Page() {
     return (
         <Navpage>
-            <h1>About</h1>
+            <div className="card">
+                <h1>About</h1>
+                <p>SmartNext is an advanced template built to offer performance, modern aesthetics, and custom tooling integrations out-of-the-box.</p>
+            </div>
         </Navpage>
     )
 }
