@@ -1,6 +1,6 @@
 /**
  * SmartNext project template
- * (C) 2023, Alessio Saltarin
+ * (C) 2023-26, Alessio Saltarin
  * MIT License (see LICENSE)
  */
 
