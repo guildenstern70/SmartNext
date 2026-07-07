@@ -9,17 +9,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "bulma": "^0.9.4",
-    "next": "14.0.2",
-    "react": "^18",
-    "react-dom": "^18"
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.0.2",
+    "@eslint/eslintrc": "^3.3.5",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.10",
     "sass": "^1.69.5"
   }
 }
