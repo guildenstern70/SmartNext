@@ -55,16 +55,16 @@ export default function Navigation() {
                         </a>
 
                         <div className="navbar-dropdown">
-                            <a className="navbar-item">
+                            <Link className="navbar-item" href="/about">
                                 About
-                            </a>
-                            <a className="navbar-item">
+                            </Link>
+                            <Link className="navbar-item" href="/contact">
                                 Contact
-                            </a>
+                            </Link>
                             <hr className="navbar-divider" />
-                                <a className="navbar-item">
-                                    Report an issue
-                                </a>
+                            <a className="navbar-item" href="https://github.com/guildenstern70/SmartNext/issues" target="_blank" rel="noopener noreferrer">
+                                Report an issue
+                            </a>
                         </div>
                     </div>
                 </div>
