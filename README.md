@@ -21,9 +21,9 @@ It is designed to be a clean, lightweight, and production-ready starting point f
 
 ### Prerequisites
 
-Make sure you have Node.js installed on your machine.
+Make sure you have Node.js and bun installed on your machine. Install bun from https://bun.com/
 - Node.js: `>= 18.0.0`
-- npm: `>= 9.0.0`
+- bun: `>= 1.4`
 
 ### 1. Setup / Installation
 
@@ -34,7 +34,7 @@ Clone the repository and install the dependencies:
 cd SmartNext
 
 # Install npm packages
-npm install
+bun install
 ```
 
 ### 2. Run the Development Server
@@ -42,7 +42,7 @@ npm install
 Start the local development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application running.
@@ -52,13 +52,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 To create an optimized production build:
 
 ```bash
-npm run build
+bun run build
 ```
 
 To run the built production server locally:
 
 ```bash
-npm run start
+bun run start
 ```
 
 ### 4. Run Linter
@@ -66,7 +66,7 @@ npm run start
 To perform ESLint code quality checks:
 
 ```bash
-npm run lint
+bun run lint
 ```
 
 ---
