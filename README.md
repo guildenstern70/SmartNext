@@ -13,6 +13,7 @@ It is designed to be a clean, lightweight, and production-ready starting point f
 - **Responsive Layout Component**: `<Navpage>` structure automatically wraps page content with a responsive navigation bar and standard page containers.
 - **Premium Aesthetics**: Features a modern dark-themed SaaS aesthetic with custom typography (`Outfit` and `Plus Jakarta Sans`) and smooth hover animations.
 - **Developer Guidelines Built-in**: Pre-configured guidelines for AI assistants and developers located in `.agents/AGENTS.md` and `AGENTS.md`.
+- **Packaging**: The repository uses `bun` for package management.
 
 ---
 

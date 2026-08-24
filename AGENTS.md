@@ -5,6 +5,7 @@ This file contains instructions, rules, and guidelines for AI agents working on 
 ## Tech Stack & Architecture
 - **Framework**: Next.js (App Router)
 - **Styling**: Custom modern Vanilla CSS3 (`app/globals.css`). There are no heavy third-party UI framework dependencies.
+- **Packaging**: The repository uses `bun` for package management.
 - **UI Components**: Custom reusable components are located in `app/components/`
   - `Navpage` (`app/components/navpage.js`): Wrapper layout that encloses all main pages using the custom design system's container classes.
   - `Navigation` (`app/components/navigation.js`): Responsive navigation header utilizing React state hooks and standard flexbox styling.
@@ -34,5 +35,5 @@ This file contains instructions, rules, and guidelines for AI agents working on 
 
 ## Verification Commands
 Before submitting or finalizing any task, ensure the following commands run successfully:
-- **Linting**: `npm run lint` (uses ESLint)
-- **Building**: `npm run build` (Next.js production build check)
+- **Linting**: `bun run lint` (uses ESLint)
+- **Building**: `bun run build` (Next.js production build check)
