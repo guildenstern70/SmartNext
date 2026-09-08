@@ -22,7 +22,7 @@ It is designed to be a clean, lightweight, and production-ready starting point f
 ### Prerequisites
 
 Make sure you have Node.js and bun installed on your machine. Install bun from https://bun.com/
-- Node.js: `>= 18.0.0`
+- Node.js: `>= 24.0.0`
 - bun: `>= 1.4`
 
 ### 1. Setup / Installation

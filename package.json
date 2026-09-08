@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "engines": {
-    "node": ">=21"
+    "node": ">=24"
   },
   "scripts": {
     "dev": "next dev",
@@ -21,5 +21,9 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.10",
     "sass": "^1.69.5"
+  },
+  "overrides": {
+    "baseline-browser-mapping": "latest",
+    "caniuse-lite": "1.0.30001810"
   }
 }

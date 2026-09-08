@@ -6,7 +6,6 @@
 
 'use client';
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -48,12 +47,8 @@ export default function Navigation() {
         <header className="nav-header">
             <div className="container nav-container">
                 <div className="nav-brand">
-                    <Link className="nav-logo-link" href="/">
-                        <Image
-                            src="/next.svg"
-                            width={80}
-                            height={80}
-                            alt="Next.js Logo" />
+                    <Link className="nav-brand-title" href="/">
+                        Smart<span>Next</span>
                     </Link>
                 </div>
 

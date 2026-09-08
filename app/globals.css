@@ -262,6 +262,32 @@ a:hover {
   align-items: center;
 }
 
+.nav-brand-title {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.nav-brand-title:hover {
+  opacity: 0.9;
+  color: transparent;
+}
+
+.nav-brand-title span {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .nav-logo-link {
   display: flex;
   align-items: center;
@@ -645,7 +671,8 @@ a:hover {
   filter: none;
 }
 
-[data-theme="light"] .landing-title {
+[data-theme="light"] .landing-title,
+[data-theme="light"] .nav-brand-title {
   background: linear-gradient(135deg, #0f172a 30%, #475569 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
