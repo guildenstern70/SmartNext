@@ -2,6 +2,8 @@
 
 SmartNext is a modern web application boilerplate built on **Next.js (App Router)** and styled using a custom, high-performance **Vanilla CSS3** system. 
 
+You can see a live demo of the boilerplate [here](https://smart-next.vercel.app/).
+
 It is designed to be a clean, lightweight, and production-ready starting point for building responsive web applications with premium dark mode aesthetics, glassmorphic UI components, and consistent layout structures.
 
 ---
